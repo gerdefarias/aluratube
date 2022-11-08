@@ -17,6 +17,8 @@ export const CSSReset = createGlobalStyle`
     min-height: 100%;
   }
   body {
+    color: white;
+    background-color: #000;
     display: flex;
     flex: 1;
   }

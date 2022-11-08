@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components"
+import { setvalorDoFiltro } from "../index"
 
 const StyledSearch = styled.div`
   display: flex;
@@ -34,14 +35,11 @@ const StyledSearch = styled.div`
   }
 `;
 
-export default function Search() {
-
-    const [ valorDaBusca, setValorDaBusca] = useState("")
-
+export default function Search(props) {
     return (
         <StyledSearch>
-            <input type="text" onChange={(e) =>
-                setValorDaBusca(e.target.value)
+            <input id="ip01" type="text" value={props.valorDoFiltro} onChange={(e) =>
+                props.setvalorDoFiltro(e.target.value)
             }/>
             <button>
                 🔎
