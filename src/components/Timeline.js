@@ -44,4 +44,30 @@ export const StyledTimeline = styled.div`
       }
     }
   }
+    * {
+    outline: 0;
+    scrollbar-color: #000 transparent;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        border: 3px solid transparent;
+        background: #000;
+        background-clip: content-box;
+    }
+
+    &::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+    }
+
 `;
