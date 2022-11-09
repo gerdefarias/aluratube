@@ -78,6 +78,7 @@ function Timeline({ searchValue, ...propriedades}) {
       <StyledTimeline>
           {playlistNames.map((playlistName) => {
               const videos = propriedades.playlists[playlistName];
+              let countVideos = 0
               //console.log(playlistName);
               //console.log(videos);
               return (
@@ -89,6 +90,7 @@ function Timeline({ searchValue, ...propriedades}) {
                               const searchNormalized = searchValue.toLowerCase()
                               return titleNormalized.includes(searchNormalized)
                           }).map((video) => {
+                              countVideos = countVideos + 1;
                               return (
                                   <a key={video.url} href={video.url}>
                                       <img src={video.thumb} />
@@ -98,6 +100,8 @@ function Timeline({ searchValue, ...propriedades}) {
                                   </a>
                               )
                           })}
+                          {countVideos === 0 ? "Nenhum Vídeo encontrado!" : "" }
+                          
                       </div>
                   </section>
               )
