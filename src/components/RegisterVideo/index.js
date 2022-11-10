@@ -25,7 +25,7 @@ export default function RegisterVideo() {
     initialValues: {titulo: "", url: ""}
  });
 
-const [ formVisivel, setFormVisivel ] = React.useState(true)
+const [ formVisivel, setFormVisivel ] = React.useState(false)
 
     return (
         <StyledRegisterVideo>
