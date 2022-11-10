@@ -44,10 +44,11 @@ const StyledHeader = styled.div`
     }
   `
   const StyleBanner = styled.div`
-    background-color: blue;
-    background-image: url( ${ ({ bg }) => bg } );
+    background-image: url( ${ ({ bg }) => bg } ) ;
+    background-size: cover;
     /* background-image: url(${config.bg}); */
     height: 230px;
+    //width: 100%;
   `
 
 function Header() {
