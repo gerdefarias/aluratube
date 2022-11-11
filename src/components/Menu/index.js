@@ -3,7 +3,7 @@ import Search from "./components/Search"
 import DarkModeSwitch from "./components/DarkModeSwitch"
 import Image from "next/image";
 
-import logo from "../../img/logo.png"
+import logo from "../../img/logo_.png"
 
 const StyledMenu = styled.header`
   display: flex;
@@ -18,6 +18,10 @@ const StyledMenu = styled.header`
   position: fixed;
   width: 100%;
   .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
     width: 100%;
     max-width: 80px;
     @media (min-width: 600px) {
@@ -32,8 +36,9 @@ const StyledMenu = styled.header`
 export default function Menu(props) {
   return (
     <StyledMenu>
-      <div>
+      <div className="logo">
         <Image src={logo} alt="logo" quality={100} />
+        <span><strong>GrdTube</strong></span>
       </div>
         <Search valorDoFiltro={props.valorDoFiltro} setvalorDoFiltro={props.setvalorDoFiltro}/>
         <DarkModeSwitch />

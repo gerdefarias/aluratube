@@ -42,6 +42,12 @@ const StyledHeader = styled.div`
       padding: 16px 32px;
       gap: 16px;
     }
+    .user-nome-nick {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+    }
   `
   const StyleBanner = styled.div`
     background-image: url( ${ ({ bg }) => bg } ) ;
@@ -58,9 +64,14 @@ function Header() {
         <section className="user-info">
           <img src={`https://github.com/${config.github}.png`} alt="" />
           <div>
-            <h2>
-              {config.name}
-            </h2>
+            <div className="user-nome-nick">
+                <h2>
+                  {config.name}
+                </h2>
+                <span>
+                    ({config.nick})
+                </span>
+            </div>
             <p>
               {config.job}
             </p>
